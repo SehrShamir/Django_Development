@@ -2,12 +2,10 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def homePage(request):
-    data={
-        'title':'Home PageNew'
-    }
-    return render(request, 'index.html', data)
+    
+    return render(request, 'index.html')
 
 def aboutUs(request):
-    return HttpResponse("Welcome to wsCubeTech")
+    return render(request, 'About.html')
 def aboutUsDet(request, courseid):
     return HttpResponse(courseid)

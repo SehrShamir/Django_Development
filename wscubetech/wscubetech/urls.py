@@ -24,6 +24,7 @@ urlpatterns = [
     path('about-us/', views.aboutUs, name='about'),
     path('login/', views.loginAt, name="login"),
     path('products/', views.Products, name='products'),
-    # path('about/<int:aboutUsDet>', views.aboutUsDet),    
+    # path('about/<int:aboutUsDet>', views.aboutUsDet), 
+    path('userForm/', views.userForm, name='userForm')   
 ]
   

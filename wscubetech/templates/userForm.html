@@ -1,0 +1,42 @@
+{% comment %} <!DOCTYPE html> {% endcomment %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+</head>
+<body>
+    <h1>User Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <!-- Name Input -->
+        <label for="username1">First Name:</label>
+        <input type="text" id="username" name="name1" value={{n1}} required><br><br>
+
+       
+        <label for="username2">Last Name:</label>
+        <input type="text" id="username" name="name2" value={{n2}} required><br><br>
+
+        {% comment %} <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br> {% endcomment %}
+
+        <!-- Gender Selection -->
+        {% comment %} <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <!-- Date of Birth -->
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob"><br><br> {% endcomment %}
+
+        <!-- Submit Button -->
+        <button type="submit">Save</button>
+        output
+        <input type="text" value"{{output}}"/>
+    </form>
+</body>
+</html>

@@ -19,9 +19,11 @@ from django.urls import path
 from wscubetech import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homePage), 
+    path('', views.homePage, name='home'), 
     path('homePage/', views.homePage),
-    path('aboutUs/', views.aboutUs),
+    path('about-us/', views.aboutUs, name='about'),
+    path('login/', views.loginAt, name="login"),
+    path('products/', views.Products, name='products'),
     # path('about/<int:aboutUsDet>', views.aboutUsDet),    
 ]
   

@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 def homePage(request):
@@ -29,6 +29,8 @@ def userForm(request):
                 'n2':n2,
                 'output':add
             }
+            url="/about-us/?output={}".format(add)
+            return HttpResponseRedirect(url)
     except:
         pass
     return render(request, 'userForm.html', data)

@@ -25,6 +25,6 @@ urlpatterns = [
     path('login/', views.loginAt, name="login"),
     path('products/', views.Products, name='products'),
     # path('about/<int:aboutUsDet>', views.aboutUsDet), 
-    path('userForm/', views.userForm, name='userForm')   
+    path('userForm/', views.userForm, name='userForm'),   
 ]
   
